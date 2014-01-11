@@ -1,0 +1,22 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# IDE files
+*.sublime-project
+*.sublime-workspace
+*.idea
+
+# Exclude node modules
+/node_modules/
+
+# Exclude config file
+config.json

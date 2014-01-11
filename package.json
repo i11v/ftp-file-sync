@@ -1,0 +1,19 @@
+{
+  "name": "dink",
+  "title": "Dink",
+  "description": "Watch for file changings and automatically deploy this files via FTP.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ilnur Khalilov",
+    "email": "ilnur.khalilov@gmail.com",
+    "url": "http://ilnurkhalilov.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xomyaq/dink.git"
+  },
+  "devDependencies": {
+    "gaze": "0.4.x",
+    "ftp": "0.3.x"
+  }
+}

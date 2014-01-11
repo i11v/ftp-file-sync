@@ -1,0 +1,16 @@
+{
+  "ftp": {
+    "host": "ftp.server.net",
+    "user": "username",
+    "password": "password"
+  },
+  "rules": [{
+    "cwd": "/local/files/directory/",
+    "remoteDir": "remote/dir/",
+    "pattern": "**/*"
+  }, {
+    "cwd": "/another/local/files/directory/",
+    "remoteDir": "another/remote/dir/",
+    "pattern": "**/*.css"
+  }]
+}
