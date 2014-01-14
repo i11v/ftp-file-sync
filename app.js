@@ -15,10 +15,12 @@ var watchFiles = function (rules, ftp) {
 
     new Watcher(pattern, function (event, filepath) {
       console.log('\n%s %s', event, filepath);
+      console.time('Upload file');
 
       ftp.put(filepath, data.remoteDir + path.relative(data.cwd, filepath), function (err) {
         if (err) throw err;
 
+        console.timeEnd('Upload file');
         console.log('File successfully uploaded');
       });
     });
@@ -35,7 +37,15 @@ ftpClient.on('error', function (err) {
   if (err) throw err;
 });
 
-fs.readFile('./config.json', function (err, stream) {
+ftpClient.on('end', function () {
+  console.log('FTP connection has ended');
+});
+
+ftpClient.on('close', function () {
+  console.log('FTP connection has closed');
+});
+
+fs.readFile(path.resolve(__dirname, './config.json'), function (err, stream) {
   if (err) throw err;
 
   try {
